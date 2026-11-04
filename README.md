@@ -105,3 +105,11 @@ See [ROADMAP.md](ROADMAP.md) and the [Issues](../../issues) tab.
 ## License
 
 [MIT](LICENSE) © 2026 Divesh Agarwal
+
+## Tests
+
+Run the offline regression tests after installing the dependencies:
+
+```bash
+python -m unittest discover -s tests -v
+```
