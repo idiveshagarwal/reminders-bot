@@ -198,7 +198,9 @@ async def habit_detail(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     streak = calc_streak(completions)
     best = calc_best_streak(completions)
     total = len(completions)
-    rate = round(total / max(30, 1) * 100)
+    today_date = date.today()
+    recent_days = {(today_date - timedelta(days=i)).isoformat() for i in range(30)}
+    rate = round(len(recent_days.intersection(completions)) / 30 * 100)
     heatmap = build_heatmap(completions)
     today = today_str()
     is_done = today in completions
