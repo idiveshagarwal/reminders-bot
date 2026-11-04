@@ -1,0 +1,10 @@
+# runtime data and secrets
+data.json
+.env
+*.env
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
